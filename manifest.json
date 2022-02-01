@@ -1,5 +1,5 @@
 {
-    "name": "Chrome Extension Starter Kit",
+    "name": "Codeforces Input Formatter",
     "version": "1.0",
     "manifest_version": 2,
     "description": "Chrome Extension starter Kit with es6 standards",
@@ -21,5 +21,11 @@
     "background": {
         "page": "background.html",
         "persistent": false
-    }
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://codeforces.com/*", "https://codeforces.com/*"],
+            "js": ["content-script.js"]
+        }
+    ]
 }
